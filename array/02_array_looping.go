@@ -3,12 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	looping_array()
+	loopingArray()
 	fmt.Println("----------------------------")
-	looping_array_again()
+	loopingArrayAgain()
 }
 
-func looping_array() {
+func loopingArray() {
 	var fruits = [4]string{"apple", "grape", "banana", "melon"}
 
 	for i, fruit := range fruits {
@@ -16,7 +16,7 @@ func looping_array() {
 	}
 }
 
-func looping_array_again() {
+func loopingArrayAgain() {
 	/* horizontal */
 	var fruits = [4]string{"orange", "durian", "mango", "papaya"}
 
