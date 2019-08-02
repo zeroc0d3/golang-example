@@ -5,24 +5,36 @@ package main
 import "fmt"
 
 func main() {
+	fmt.Println("Print Alphabet Only")
+	fmt.Println("=========================")
 	loopAlphabet()
-	//fmt.Println("\n")
-	//loopInteger()
+	fmt.Println("\n")
+	fmt.Println("Print Number Only")
+	fmt.Println("=========================")
+	loopInteger()
+	fmt.Println("\n")
+	fmt.Println("Print Alphabet & Number")
+	fmt.Println("=========================")
+	loopAlphabetNumber()
 }
 
 func loopAlphabet() {
 	for i := 'A'; i <= 'Z'; i++ {
 		fmt.Printf(" %c", i)
-		if i == 'Z' {
-			for j := 0; j <= 9; j++ {
-				fmt.Printf(" %d", j)
-			}
-		}
 	}
 }
 
 func loopInteger() {
-	for i := 0; i <= 9; i++ {
-		fmt.Printf(" %d", i)
+	for j := 0; j <= 9; j++ {
+		fmt.Printf(" %d", j)
+	}
+}
+
+func loopAlphabetNumber() {
+	for i := 'A'; i <= 'Z'; i++ {
+		fmt.Printf(" %c", i)
+		if i == 'Z' {
+			loopInteger()
+		}
 	}
 }
